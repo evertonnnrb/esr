@@ -2,13 +2,15 @@ package com.api.algafood.controller;
 
 import com.api.algafood.service.AtivacaoClienteService;
 import com.api.algafood.domain.model.Usuario;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/index")
+@RequestMapping(value="/index",
+        produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 public class IndexController {
 
     private AtivacaoClienteService clienteService;

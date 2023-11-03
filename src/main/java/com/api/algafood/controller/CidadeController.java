@@ -1,7 +1,7 @@
 package com.api.algafood.controller;
 
-import com.api.algafood.domain.model.Cozinha;
-import com.api.algafood.domain.service.CozinhaService;
+import com.api.algafood.domain.model.Cidade;
+import com.api.algafood.domain.service.CidadeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/cozinhas"
+@RequestMapping(value = "/cidades"
         , produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 @RequiredArgsConstructor
-public class CozinhaController {
+public class CidadeController {
 
-    private final CozinhaService cozinhaService;
+    private final CidadeService cidadeService;
 
     @GetMapping
-    public ResponseEntity<List<Cozinha>> getAll() {
-        return new ResponseEntity<>(cozinhaService.getAll(), HttpStatus.OK);
+    public ResponseEntity<List<Cidade>> getAll() {
+        return new ResponseEntity<>(cidadeService.getAll(), HttpStatus.OK);
     }
 }
