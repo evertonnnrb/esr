@@ -1,9 +1,8 @@
 package com.api.algafood.service;
 
 import com.api.algafood.notificador.Notificador;
-import com.api.algafood.notificador.NotificadorEmail;
-import model.Cliente;
-import model.Produto;
+import com.api.algafood.model.Cliente;
+import com.api.algafood.model.Produto;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,7 +15,6 @@ public class EmissaoNFService {
     }
 
     public EmissaoNFService() {
-        System.out.println("*** CONSTRUTOR EMISSAON NF SERVICE");
         this.notificador = notificador;
     }
 

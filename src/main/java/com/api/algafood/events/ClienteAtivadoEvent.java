@@ -1,6 +1,6 @@
 package com.api.algafood.events;
 
-import model.Cliente;
+import com.api.algafood.model.Cliente;
 
 public class ClienteAtivadoEvent {
 

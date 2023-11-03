@@ -1,6 +1,6 @@
 package com.api.algafood.notificador;
 
-import model.Cliente;
+import com.api.algafood.model.Cliente;
 
 public interface Notificador {
 

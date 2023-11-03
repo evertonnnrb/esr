@@ -1,15 +1,13 @@
 package com.api.algafood.notificador;
 
-import model.Cliente;
+import com.api.algafood.model.Cliente;
 public class NotificadorEmail implements Notificador {
 
     private boolean caixaAlta;
     private String servidorSMTP;
 
-    public NotificadorEmail(String smtp) {
-        this.servidorSMTP = smtp;
-        System.out.println("**** CONSTRUTOR NOTIFICADOR EMAIL CHAMADO");
-        System.out.println("CAIXA ALTA " + caixaAlta);
+    public NotificadorEmail(String servidorSMTP) {
+        this.servidorSMTP = servidorSMTP;
     }
 
     @Override

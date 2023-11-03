@@ -1,12 +1,11 @@
 package com.api.algafood.di;
 
 import com.api.algafood.notificador.Notificador;
-import com.api.algafood.notificador.NotificadorEmail;
 import com.api.algafood.notificador.NotificadorSMS;
 import com.api.algafood.service.AtivacaoClienteService;
 import com.api.algafood.service.EmissaoNFService;
-import model.Cliente;
-import model.Produto;
+import com.api.algafood.model.Cliente;
+import com.api.algafood.model.Produto;
 
 import java.math.BigDecimal;
 

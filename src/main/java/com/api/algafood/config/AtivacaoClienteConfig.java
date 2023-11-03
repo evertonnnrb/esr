@@ -1,9 +1,8 @@
 package com.api.algafood.config;
 
 import com.api.algafood.service.AtivacaoClienteService;
-import model.Cliente;
+import com.api.algafood.model.Cliente;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration

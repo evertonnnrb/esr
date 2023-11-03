@@ -1,7 +1,7 @@
 package com.api.algafood.service;
 
 import com.api.algafood.events.ClienteAtivadoEvent;
-import model.Cliente;
+import com.api.algafood.model.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
@@ -14,7 +14,6 @@ public class AtivacaoClienteService {
     private ApplicationEventPublisher eventPublisher;
 
     public AtivacaoClienteService() {
-        System.out.println("CHAMADA CONSTRUTOR ATIVAÇÃO CLIENTE SERVICE");
     }
 
     public void ativarCliente(Cliente cliente) {

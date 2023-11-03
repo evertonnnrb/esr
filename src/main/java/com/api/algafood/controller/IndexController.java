@@ -1,7 +1,7 @@
 package com.api.algafood.controller;
 
 import com.api.algafood.service.AtivacaoClienteService;
-import model.Cliente;
+import com.api.algafood.model.Cliente;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,6 +26,7 @@ public class IndexController {
         cliente.setTelefone("99440044");
         cliente.setEmail("arthur_nrb@gmail.com");
 
+        clienteService.ativarCliente(cliente);
 
         return "Cliente ativo? " + cliente.isAtivo();
     }
