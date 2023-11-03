@@ -1,7 +1,7 @@
 package com.api.algafood.service;
 
 import com.api.algafood.events.ClienteAtivadoEvent;
-import com.api.algafood.model.Cliente;
+import com.api.algafood.domain.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ public class AtivacaoClienteService {
     public AtivacaoClienteService() {
     }
 
-    public void ativarCliente(Cliente cliente) {
+    public void ativarCliente(Usuario cliente) {
         cliente.ativar();
         eventPublisher.publishEvent(new ClienteAtivadoEvent(cliente));
     }

@@ -1,16 +1,16 @@
 package com.api.algafood.events;
 
-import com.api.algafood.model.Cliente;
+import com.api.algafood.domain.model.Usuario;
 
 public class ClienteAtivadoEvent {
 
-    private Cliente cliente;
+    private Usuario cliente;
 
-    public ClienteAtivadoEvent(Cliente cliente) {
+    public ClienteAtivadoEvent(Usuario cliente) {
         this.cliente = cliente;
     }
 
-    public Cliente getCliente() {
+    public Usuario getCliente() {
         return cliente;
     }
 }

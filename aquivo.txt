@@ -1,0 +1,9 @@
+ANOTATIONS
+
+telnet www.uol.com 80
+
+GET/ HTTPS/1.1
+Host: www.uol.com.br
+Accept: text/html
+
+sudo nano /etc/hosts

@@ -1,8 +1,8 @@
 package com.api.algafood.notificador;
 
-import com.api.algafood.model.Cliente;
+import com.api.algafood.domain.model.Usuario;
 
 public interface Notificador {
 
-    String notificarCliente(Cliente cliente, String msg);
+    String notificarCliente(Usuario cliente, String msg);
 }

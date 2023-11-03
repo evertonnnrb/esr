@@ -4,20 +4,20 @@ import com.api.algafood.notificador.Notificador;
 import com.api.algafood.notificador.NotificadorSMS;
 import com.api.algafood.service.AtivacaoClienteService;
 import com.api.algafood.service.EmissaoNFService;
-import com.api.algafood.model.Cliente;
-import com.api.algafood.model.Produto;
+import com.api.algafood.domain.model.Usuario;
+import com.api.algafood.domain.model.Produto;
 
 import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {
-        Cliente cliente = new Cliente();
+        Usuario cliente = new Usuario();
         cliente.setNome("Everton");
         cliente.setEmail("everton.nrb@gmail.com");
         cliente.setTelefone("3344-3003");
 
         Produto produto = new Produto();
-        produto.setNome("IPHONE 15");
+        produto.setDescricao("IPHONE 15");
         produto.setValor(new BigDecimal(150000));
 
         Notificador notificador = new NotificadorSMS();

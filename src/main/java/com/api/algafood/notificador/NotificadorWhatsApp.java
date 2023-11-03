@@ -2,7 +2,7 @@ package com.api.algafood.notificador;
 
 import com.api.algafood.notations.TipoNotificador;
 import com.api.algafood.notations.enuns.NivelNotificador;
-import com.api.algafood.model.Cliente;
+import com.api.algafood.domain.model.Usuario;
 import org.springframework.stereotype.Component;
 
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class NotificadorWhatsApp implements Notificador {
     @Override
-    public String notificarCliente(Cliente cliente, String msg) {
+    public String notificarCliente(Usuario cliente, String msg) {
         return "Notificando " + cliente.getNome() +
                 " a ativação de sua conta\n mandando um whatsap para :" + cliente.getTelefone();
     }

@@ -1,7 +1,7 @@
 package com.api.algafood.controller;
 
 import com.api.algafood.service.AtivacaoClienteService;
-import com.api.algafood.model.Cliente;
+import com.api.algafood.domain.model.Usuario;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,7 +21,7 @@ public class IndexController {
     @ResponseBody
     public String getHello() {
 
-        Cliente cliente = new Cliente();
+        Usuario cliente = new Usuario();
         cliente.setNome("Arthur");
         cliente.setTelefone("99440044");
         cliente.setEmail("arthur_nrb@gmail.com");
