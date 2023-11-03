@@ -13,8 +13,11 @@ public class CidadeService {
 
     private final CidadeRepository cidadeRepository;
 
-
     public List<Cidade> getAll() {
         return cidadeRepository.findAll();
+    }
+
+    public Cidade getOne(Long id) {
+        return cidadeRepository.findById(id).get();
     }
 }

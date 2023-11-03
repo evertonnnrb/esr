@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +24,10 @@ public class CidadeController {
     @GetMapping
     public ResponseEntity<List<Cidade>> getAll() {
         return new ResponseEntity<>(cidadeService.getAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<Cidade> getOne(@PathVariable Long id) {
+        return new ResponseEntity<>(cidadeService.getOne(id), HttpStatus.OK);
     }
 }
