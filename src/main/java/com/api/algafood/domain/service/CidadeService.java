@@ -17,6 +17,10 @@ public class CidadeService {
         return cidadeRepository.findAll();
     }
 
+    public Cidade insert(Cidade cidade) {
+        return cidadeRepository.save(cidade);
+    }
+
     public Cidade getOne(Long id) {
         return cidadeRepository.findById(id).get();
     }

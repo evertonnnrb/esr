@@ -13,7 +13,11 @@ public class RestauranteService {
 
     private final RestauranteRepository restauranteRepository;
 
-    public List<Restaurante> getAll(){
+    public List<Restaurante> getAll() {
         return restauranteRepository.findAll();
+    }
+
+    public Restaurante getById(Long id) {
+        return restauranteRepository.findById(id).orElseThrow();
     }
 }

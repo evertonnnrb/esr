@@ -9,7 +9,7 @@ import java.util.List;
 
 @JacksonXmlRootElement(localName = "cozinhas")
 @Data
-public class CozinhaRepresentationModelXml {
+public class CozinhaXmlWrapper {
 
     @NonNull
     private List<Cozinha> cozinhas;

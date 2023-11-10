@@ -1,5 +1,7 @@
 package com.api.algafood.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,6 +15,8 @@ import java.io.Serializable;
 @Data
 @Entity
 public class Estado implements Serializable {
+
+    @JsonIgnore
     @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,5 +24,6 @@ public class Estado implements Serializable {
 
     private String nome;
 
+    @JsonProperty("UF")
     private String sigla;
 }

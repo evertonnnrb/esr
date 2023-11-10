@@ -18,10 +18,11 @@ import javax.persistence.Id;
 @Entity
 public class Cozinha {
 
-    @JsonIgnore
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
+    @JsonIgnore
     private Long id;
 
     @JsonProperty("titulo")
