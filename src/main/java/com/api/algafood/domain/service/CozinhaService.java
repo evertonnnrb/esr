@@ -4,6 +4,7 @@ import com.api.algafood.domain.model.Cozinha;
 import com.api.algafood.domain.repository.CozinhaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class CozinhaService {
 
     private final CozinhaRepository cozinhaRepository;
 
+    @Transactional
     public Cozinha insert(Cozinha cozinha) {
         return cozinhaRepository.save(cozinha);
     }
@@ -23,6 +25,6 @@ public class CozinhaService {
     }
 
     public Cozinha getById(Long id) {
-        return cozinhaRepository.findById(id).orElseThrow();
+        return cozinhaRepository.findById(id).get();
     }
 }
