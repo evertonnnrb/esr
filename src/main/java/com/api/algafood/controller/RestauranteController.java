@@ -40,6 +40,15 @@ public class RestauranteController {
         return ResponseEntity.ok(list);
     }
 
+    @GetMapping("/find")
+    public ResponseEntity<List<Restaurante>> find
+            (@RequestParam String nome,
+             @RequestParam BigDecimal taxaInicial,
+             @RequestParam BigDecimal taxaFinal) {
+        List<Restaurante> find = restauranteService.find(nome, taxaInicial, taxaFinal);
+        return ResponseEntity.ok(find);
+    }
+
     @GetMapping("/buscar")
     public ResponseEntity<List<Optional<Restaurante>>> findRestaurantesWithCozinhas(
             @RequestParam String nome,

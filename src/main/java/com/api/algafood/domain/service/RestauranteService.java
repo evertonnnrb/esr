@@ -27,7 +27,13 @@ public class RestauranteService {
         return restauranteRepository.findByTaxaFreteBetween(taxaInicial, taxaFinal);
     }
 
-    public List<Optional<Restaurante>> findRestaurantesECozinhas(String nome, Long cozinhaId){
-        return restauranteRepository.buscarRestaurantesECozinhas(nome,cozinhaId);
+    public List<Optional<Restaurante>> findRestaurantesECozinhas(String nome, Long cozinhaId) {
+        return restauranteRepository.buscarRestaurantesECozinhas(nome, cozinhaId);
+    }
+
+    public List<Restaurante> find(String nome,
+                                  BigDecimal taxaFreteInicial,
+                                  BigDecimal taxaFreteFinal) {
+        return restauranteRepository.find(nome, taxaFreteInicial, taxaFreteFinal);
     }
 }
