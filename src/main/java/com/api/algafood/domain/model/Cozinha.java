@@ -22,7 +22,7 @@ public class Cozinha {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    @JsonIgnore
+    //@JsonIgnore
     private Long id;
 
     @JsonProperty("titulo")
